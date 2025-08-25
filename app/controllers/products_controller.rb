@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
 
   def show
   end
-  
+
   def new
     @product = Product.new
   end
@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.save
       redirect_to @product
-    else 
+    else
       render :new, status: :unprocessable_entity
     end
   end
@@ -38,8 +38,8 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 
-  private 
-    def set_product 
+  private
+    def set_product
       @product = Product.find(params[:id])
     end
 

@@ -21,5 +21,4 @@ Rails.application.routes.draw do
   resource :unsubscribe, only: [ :show ]
 
   root "products#index"
-
 end
